@@ -1,0 +1,209 @@
+<!-- Example for https://www.upwork.com/nx/find-work/most-recent/details/~01f5d519f1d0bbabc7?pageTitle=Job%20Details&_navType=slider&_modalInfo=%5B%7B%22navType%22%3A%22slider%22,%22title%22%3A%22Job%20Details%22,%22modalId%22%3A%221641208464259%22%7D%5D -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML + CSS Expert Needed Part-Time Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <script>
+      function renderRow(item, isLast) {
+        return `<div class="data-row ${isLast ? 'last-data-row' : ''}">
+          <div class="column name-column">
+            <div class="link-title">
+              ${
+                item.isSecure
+                  ? `<span>
+                <svg
+                  width="11"
+                  height="14"
+                  viewBox="0 0 11 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.33333 4.66667H8.66667V3.33333C8.66667 1.49333 7.17333 0 5.33333 0C3.49333 0 2 1.49333 2 3.33333V4.66667H1.33333C0.6 4.66667 0 5.26667 0 6V12.6667C0 13.4 0.6 14 1.33333 14H9.33333C10.0667 14 10.6667 13.4 10.6667 12.6667V6C10.6667 5.26667 10.0667 4.66667 9.33333 4.66667ZM5.33333 10.6667C4.6 10.6667 4 10.0667 4 9.33333C4 8.6 4.6 8 5.33333 8C6.06667 8 6.66667 8.6 6.66667 9.33333C6.66667 10.0667 6.06667 10.6667 5.33333 10.6667ZM7.4 4.66667H3.26667V3.33333C3.26667 2.19333 4.19333 1.26667 5.33333 1.26667C6.47333 1.26667 7.4 2.19333 7.4 3.33333V4.66667Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>`
+                  : ""
+              }
+              ${item.title}
+            </div>
+            <div class="description">
+              <div>
+                ${item.description}
+              </div>
+              <br />
+              <div>
+                Owner: <span class="owner-name">${item.owner} </span>
+                <span class="pbs">(PBS)</span>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="time">${item.lastActive}</div>
+          </div>
+          <div class="column">
+            ${item.isJoined ? `<div class="button">MEMBER</div>` : ""}
+            <div class="leave-button ${!item.isJoined ? "joined-button" : ""}">
+              ${
+                item.isJoined
+                  ? `<svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.25 9C17.25 13.5563 13.5563 17.25 9 17.25C4.44365 17.25 0.75 13.5563 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75C13.5563 0.75 17.25 4.44365 17.25 9Z"
+                  stroke="#6D6D6D"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.2301 6.83013C12.523 6.53724 12.523 6.06237 12.2301 5.76947C11.9372 5.47658 11.4624 5.47658 11.1695 5.76947L8.9998 7.93914L6.83013 5.76947C6.53724 5.47658 6.06237 5.47658 5.76947 5.76947C5.47658 6.06237 5.47658 6.53724 5.76947 6.83013L7.93914 8.9998L5.76947 11.1695C5.47658 11.4624 5.47658 11.9372 5.76947 12.2301C6.06237 12.523 6.53724 12.523 6.83013 12.2301L8.9998 10.0605L11.1695 12.2301C11.4624 12.523 11.9372 12.523 12.2301 12.2301C12.523 11.9372 12.523 11.4624 12.2301 11.1695L10.0605 8.9998L12.2301 6.83013Z"
+                  fill="#6D6D6D"
+                />
+              </svg>`
+                  : `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.25 9C17.25 13.5563 13.5563 17.25 9 17.25C4.44365 17.25 0.75 13.5563 0.75 9C0.75 4.44365 4.44365 0.75 9 0.75C13.5563 0.75 17.25 4.44365 17.25 9Z" stroke="#6D6D6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.74891 5.18162C9.74891 4.76741 9.41312 4.43162 8.99891 4.43162C8.5847 4.43162 8.24891 4.76741 8.24891 5.18162L8.24891 8.25L5.18053 8.25C4.76632 8.25 4.43053 8.58579 4.43053 9C4.43053 9.41421 4.76632 9.75 5.18053 9.75L8.24891 9.75L8.24891 12.8184C8.24891 13.2326 8.5847 13.5684 8.99891 13.5684C9.41312 13.5684 9.74891 13.2326 9.74891 12.8184L9.74891 9.75H12.8173C13.2315 9.75 13.5673 9.41421 13.5673 9C13.5673 8.58579 13.2315 8.25 12.8173 8.25H9.74891L9.74891 5.18162Z" fill="#6D6D6D"/>
+</svg>`
+              }
+              <span class="leave-text">${
+                item.isJoined ? "LEAVE" : "JOIN"
+              }</span>
+            </div>
+          </div>
+        </div>`;
+      }
+
+      const data = [
+        {
+          title: "Membership Best Practices",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quisque velit eget ante tellus tellus tristique aliquet nisl.",
+          owner: "Dina McCloud",
+          isSecure: false,
+          isJoined: true,
+          lastActive: "11:04 AM",
+        },
+        {
+          title: "Results Gathering: EOY 2020",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quisque velit eget ante tellus tellus tristique aliquet nisl.",
+          owner: "Michael Jackson",
+          isSecure: true,
+          isJoined: true,
+          lastActive: "Last month",
+        },
+        {
+          title: "Streamlined Digital Giving on PBS",
+          description:
+            "Discussions concerning Stripe, Frakture, and other aspects relating to streamlined digital giving on PBS properties.",
+          owner: "Michael Jackson",
+          isSecure: true,
+          isJoined: true,
+          lastActive: "4:09 PM",
+        },
+        {
+          title: "Fundraising with PBS",
+          description:
+            "Discuss recent initiatives , exchange ideas, and provide feedback regarding fundraising on PBS digital properties.",
+          owner: "Kaytee Black",
+          isSecure: false,
+          isJoined: true,
+          lastActive: "4 weeks ago",
+        },
+        {
+          title: "PMDMC 2020",
+          description:
+            "The virtual hallway for PMDMC 2020! Introduce yourself, discuss themes from this year’s talks — anything goes.",
+          owner: "Kaytee Black",
+          isSecure: false,
+          isJoined: false,
+          lastActive: "11:04 AM",
+        },
+        {
+          title: "PMDMC 2019",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quisque velit eget ante tellus tellus tristique aliquet nisl.",
+          owner: "Michael Jackson",
+          isSecure: false,
+          isJoined: false,
+          lastActive: "1 year ago",
+        },
+      ];
+      window.onload = function () {
+        const target = document.getElementById("data");
+        console.log("target", target);
+
+        data.map((item, index) => {
+          const isLast = data.length === index + 1;
+          output = renderRow(item, isLast);
+          target.innerHTML += output;
+        });
+      };
+    </script>
+    <div class="container">
+      <div class="heading">
+        <svg
+          width="23"
+          height="20"
+          viewBox="0 0 23 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.0307 18.9995V16.9995C17.0307 15.9386 16.6176 14.9212 15.8822 14.1711C15.1469 13.4209 14.1495 12.9995 13.1096 12.9995H5.26749C4.22756 12.9995 3.23023 13.4209 2.49489 14.1711C1.75955 14.9212 1.34644 15.9386 1.34644 16.9995V18.9995"
+            stroke="#000005"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9.1891 8.99991C11.3546 8.99991 13.1101 7.20907 13.1101 4.99995C13.1101 2.79084 11.3546 1 9.1891 1C7.02357 1 5.26807 2.79084 5.26807 4.99995C5.26807 7.20907 7.02357 8.99991 9.1891 8.99991Z"
+            stroke="#000005"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M21.9319 18.9998V16.9999C21.9312 16.1136 21.6421 15.2526 21.1098 14.5522C20.5775 13.8517 19.8322 13.3514 18.991 13.1299"
+            stroke="#000005"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15.0701 1.12988C15.9135 1.35018 16.6611 1.85058 17.1949 2.55218C17.7288 3.25379 18.0186 4.11669 18.0186 5.00485C18.0186 5.89302 17.7288 6.75592 17.1949 7.45752C16.6611 8.15913 15.9135 8.65952 15.0701 8.87982"
+            stroke="#000005"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span>Groups</span>
+      </div>
+      <div class="content">
+        <div class="titles">
+          <div class="column name-column">Name</div>
+          <div class="column">Last Active</div>
+          <div class="column">Membership</div>
+        </div>
+        <div id="data" class="data">
+          <!--  List data showing here using javascript -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
